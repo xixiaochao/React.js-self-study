@@ -1,0 +1,50 @@
+1、React是个啥？
+  React是FaceBook研发的一款基于MVC（数据影响视图）模式的JS框架（vue是MVVM框架）
+  React全家桶：react（v16）、react-dom（v16 DOM是用来构建webApp，NATIVE是用来构建APP的）、redux、react-redux（dva，mobx）、react-router-dom、axios/fetch、antd...
+
+2、React的JSX（javascript and xml[html]）语法 ：独有的语法，浏览器不能直接的识别，需要经过一系列的解析=>"JSX的渲染原理（虚拟dom的渲染原理）"
+    1）首先基于babel-preset-react/babel-preset-react-app把JSX语法编译为React.createElement(...)的形式
+    2）然后把React下的createElement方法执行，返回的结果是：虚拟DOM对象
+    ```
+    {
+        type:xxx,
+        props:{
+            children:[],
+            name:xxx,
+            className:xxx,
+            style:...
+        }
+    }
+    ```
+    3）ReactDOM.render(JSX对象，容器)，基于render把JSX对象变为真实的DOM元素插入到页面指定容器中
+
+3、React的脚手架
+    create-react-app（官方）
+    ...
+
+    ```
+    npm i -g create-react-app
+        1、用法
+        create-react-app 项目名（遵循NPM包命名规范）
+            注意：电脑安装yarn，基于这个脚手架生成项目也是基于yarn安装的，后期我们需要额外安装模块的时候，最好还是使用yarn add xxx，防止使用npm丢包
+
+         package.json中有一些安装的模块信息和可执行的脚本命名
+
+         脚手架为了美化项目结构，会把webpack、babel等都统一继承在react-scripts中，隐藏到node_modules目录下
+
+    ```
+
+--------------------------
+ 网址
+ 1、MDN
+ 2、掘金
+ 3、简书
+ 4、stackoverflow
+ 5、segmentfault
+ 6、github
+ 。。。
+
+ vue全家桶：vue、vue-router、vuex、axios/fetch、vue element/iview/vux
+
+
+ yarn add prop-types bootstrap redux react-redux
